@@ -17,7 +17,7 @@ Demo version app has been added for a better explanation of the library.
 > Step 2. Add the dependency
 ```gradle
     dependencies {
-	        implementation 'com.github.X0t0.GDPR-Admob-Android:consentsdk:0.1.7'
+	        implementation 'com.github.X0t0.GDPR-Admob-Android:consentsdk:0.1.8'
 	}
 ```
 ---
