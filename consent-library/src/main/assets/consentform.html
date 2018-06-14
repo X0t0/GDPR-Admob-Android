@@ -120,8 +120,9 @@
       line-height: 16px;
     }
     #head_question {
-      font-size: 18px;
-      line-height: 23px;
+      font-size: 12px;
+      font-style: normal;
+      line-height: 16px;
       margin-top: 12px;
     }
     .head_detail {
@@ -147,14 +148,80 @@
     #buttons {
       color: #1A73E8;
     }
+    .button326{
+      background: #27ae60;
+      color: #fff;
+  -webkit-animation: wobble 2s infinite;
+  -moz-animation: wobble 2s infinite;
+  -o-animation: wobble 2s infinite;
+  animation: wobble 2s infinite;
+    }
+@-webkit-keyframes wobble {
+  16.65% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+  33.3% {
+    -webkit-transform: translateX(-6px);
+    transform: translateX(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateX(4px);
+    transform: translateX(4px);
+  }
+  66.6% {
+    -webkit-transform: translateX(-2px);
+    transform: translateX(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateX(1px);
+    transform: translateX(1px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes wobble {
+  16.65% {
+    -webkit-transform: translateX(8px);
+    -ms-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+  33.3% {
+    -webkit-transform: translateX(-6px);
+    -ms-transform: translateX(-6px);
+    transform: translateX(-6px);
+  }
+  49.95% {
+    -webkit-transform: translateX(4px);
+    -ms-transform: translateX(4px);
+    transform: translateX(4px);
+  }
+  66.6% {
+    -webkit-transform: translateX(-2px);
+    -ms-transform: translateX(-2px);
+    transform: translateX(-2px);
+  }
+  83.25% {
+    -webkit-transform: translateX(1px);
+    -ms-transform: translateX(1px);
+    transform: translateX(1px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
     .button {
       border-radius: 8px;
-      border: 1px solid #e0e0e0;
       box-sizing: border-box;
       cursor: pointer;
       padding: 12px 16px 14px;
       margin-top: 16px;
-      min-height: 52px;
+      min-height: 12px;
       text-align: center;
       overflow: hidden;
       opacity: 1;
@@ -878,8 +945,9 @@
         </div>
         <div id="options">
           <div id="title_head">
-            <div class="head_intro">We care about your privacy and data security. We keep this app free by showing ads.</div>
-            <div id="head_question">Can we continue to use your data to tailor ads for you?</div>
+            <div class="head_intro">Dear user!</div>
+            <div>We use Google Admob to show ads. Ads support our work, and enable further development of this app. In line with the new European Data Protection Regulation(GDPR), we need your consent to serve ads toilored for you</div>
+            <div id="head_question">By choosing "confirm" Bellow, you are confirming that you want us to use your data to see relevant Ads.</div>
             <div class="head_detail">
               <span id="change_anytime_text1">You can change your choice anytime for <span class="app_name">App Name</span> in the app settings.</span>
               <span id="head_detail_text">Our partners will collect data and use a unique identifier on your device to show you ads.
@@ -888,11 +956,15 @@
             </div>
           </div>
           <div id="buttons" data-sel="">
-            <div id="btn0" class="button btn0 flex-center" onclick="actionClick(event, 'agree0');">
-              <div class="button_title">Yes, continue to see relevant ads</div>
+            <div id="btn0" class="button button326 btn0 flex-center" onclick="actionClick(event, 'agree0');">
+              <div class="button_title">Confirm</div>
             </div>
             <div id="btn1" class="button btn1 flex-center" onclick="showUniqueIdInfo();">
-              <div id="btn1_title" class="button_title">No, see ads that are less relevant</div>
+              <div id="btn1_title" style="
+    font-size: 13px;
+    font-weight: 100;
+    line-height: 12px;
+" class="button_title">No</div>
             </div>
             <div id="btn2" class="button btn2 flex-center" onclick="actionClick(event, 'install');">
               <div class="button_title">Pay for the ad-free version</div>
